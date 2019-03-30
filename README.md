@@ -1,4 +1,4 @@
-# Stremio Add-on for 4anime Anime
+# Stremio Add-on for 4anime
 
 This add-on uses [Stremio Kitsu](https://github.com/henryhomes/stremio-kitsu) internally to show it's stream results next to other anime add-ons.
 
