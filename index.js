@@ -20,7 +20,7 @@ const manifest = {
     name: 'Anime from 4anime',
     description: 'Anime from 4anime',
     resources: ['catalog', 'meta', 'stream'],
-    types: ['series'],
+    types: ['series', 'movie'],
     idPrefixes: ['kitsu:'],
     catalogs: [
       {
@@ -385,7 +385,7 @@ addon.defineStreamHandler(args => {
       }
       const idParts = id.split(':')
       const kitsuId = 'kitsu:' + idParts[1]
-      const episode = idParts[idParts.length -1] || 0
+      const episode = idParts.length > 2 ? idParts[idParts.length -1] : 1
       db.map.get(kitsuId, id4 => {
         if (id4) {
           const cloneSlugs = JSON.parse(JSON.stringify(id4))
